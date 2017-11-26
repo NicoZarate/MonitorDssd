@@ -71,8 +71,8 @@ class Access
             //Almaceno el token de Bonita en una variable de sesion para utilizarla en los requests futuros
             $token = $cookieJar->getCookieByName('X-Bonita-API-Token');
             $_SESSION['X-Bonita-API-Token'] = $token->getValue();
-            //Luego de esto, tendrías que ver la el archivo classes/Request.php
-            //Ahí vas a ver que cuando se hace un request con POST se agrega un header con el token
+            //Luego de esto, tendrï¿½as que ver la el archivo classes/Request.php
+            //Ahï¿½ vas a ver que cuando se hace un request con POST se agrega un header con el token
 
             $_SESSION['user_bonita']= $_POST['user'];
             $_SESSION['password_bonita']= $_POST['password'];
