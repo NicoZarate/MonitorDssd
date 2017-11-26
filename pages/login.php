@@ -51,7 +51,7 @@
                             <fieldset>
                                 <div class="form-group">
                                     <label>Usuario</label>
-                                    <input class="form-control" placeholder="Usuario de Bonita OS" name="user" type="text" value="walter.bates" autofocus>
+                                    <input class="form-control" placeholder="Usuario de Bonita OS" name="user" type="text" value="evaluador1" autofocus>
                                 </div>
                                 <div class="form-group">
                                     <label>Contraseña</label>

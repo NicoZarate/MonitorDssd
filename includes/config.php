@@ -7,6 +7,7 @@ require '../classes/Users.php';
 require '../classes/Process.php';
 require '../classes/Cases.php';
 require '../classes/Task.php';
+require '../classes/Indicador.php';
 require '../vendor/autoload.php';
 
 session_start();
