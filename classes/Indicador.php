@@ -28,7 +28,7 @@ class Indicador{
         return round($promedio,2) ;
 
     }
-    public static function getExpediantesRechazados(){
+    public static function getExpedientesRechazados(){
         $database= new PDO('mysql:dbname=dssd;host=localhost','dssd','dssd');
         $query = $database -> prepare('SELECT user_id,name,lastname,dni,fecha,tipo,cantidad,descripcion  FROM incidents as i inner join users as u on i.user_id=u.id WHERE estado = "Rechazado"
                                         ');

@@ -34,7 +34,7 @@ ini_set("display_errors", 1);
                                 <tbody>
 
                                 <?php
-                                $procesos = Indicador::getExpediantesRechazados();
+                                $procesos = Indicador::getExpedientesRechazados();
 
                                 foreach ($procesos as $proceso){
                                     echo '<tr>';
