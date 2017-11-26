@@ -3,6 +3,7 @@
 namespace Monitor;
 use \PDO;
 
+
 class Indicador{
 
     function conexion(){
@@ -41,6 +42,30 @@ class Indicador{
         unset($database);
 
         return $aux ;
+
+    }
+
+    public static function getRevisorQueMasTareasRealizo(){
+        $response = Task::getArchivedTasks();
+        if ($response['success']) {
+            $tasks = $response['data'];
+            $arreglo=[];
+            foreach ($tasks as $task) {
+                if($task->type=="USER_TASK" && $task->name=="Revisar Presupuesto"){
+                    
+                   array_push($arreglo, $task->assigned_id);
+
+
+                }
+              
+            }
+               $arregloDeId= array_count_values($arreglo);
+               krsort($arregloDeId);
+               $id=key($arregloDeId); 
+               $userName=Users::getUserUsername($id);
+               return $userName;                 
+        }
+
 
     }
     
