@@ -61,8 +61,11 @@ class Indicador{
             }
                $arregloDeId= array_count_values($arreglo);
                krsort($arregloDeId);
-               $id=key($arregloDeId); 
-               $userName=Users::getUserUsername($id);
+               $id=key($arregloDeId);
+               $userName=""; 
+               if(isset($id)){
+                   $userName=Users::getUserUsername($id);
+               }
                return $userName;                 
         }
 
